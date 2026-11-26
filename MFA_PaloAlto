@@ -1,0 +1,17 @@
+Alors dans ce cas de figure (mise en oeuvre d'une MFA pour l'accès VPN).
+C'est un vrai RISQUE de brute-force.
+
+On a :
+1- une application à installer sur le tenant O365, il se nomme PaloAlto quelque chose.
+2- Durant l'installation, il délivre une fichier XML pour le SAML.
+3- C'est ce fichier qui sera ensuite installé sur le PaloAlto pour permettre de faire le lien SAML (Idp <-> PaloAlto).
+4- Il faut maintenant une graine TOTP. Là plusieurs solutions:
+      4a- Utiliser "Keepass" avec le jeton généré dans la gestion du compte individuel
+      4b- Utiliser autre chose, comme (nativement Microsoft Authenticator vu que c'est du Microsoft)
+
+
+
+
+=== ESSP ===
+On a déjà une MFA pour Teams, donc les utilisateurs ont déjà un TOTP.
+Et là où s'est bleuffant c'est que une fois passer cette authentification Teams, on a pas a faire une autre authent ==> SSO.
